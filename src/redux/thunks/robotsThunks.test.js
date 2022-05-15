@@ -1,4 +1,4 @@
-import mockRobots from "../../mocks/mockRobots";
+import { mockRobots } from "../../mocks/mockRobots";
 import { loadRobotsActionCreator } from "../features/robotsSlice";
 import { loadRobotsThunk } from "./robotsThunks";
 
