@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test-coverage": "npm run test -- --coverage --watchAll=false"
+    "test-coverage": "npm run test -- --coverage --watchAll=false",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "msw": "^0.39.2"
+    "msw": "^0.39.2",
+    "husky": "^7.0.0"
   }
 }
