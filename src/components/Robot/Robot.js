@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteRobotActionCreator } from "../../redux/features/robotsSlice";
+import { deleteRobotsThunk } from "../../redux/thunks/robotsThunks";
 import Button from "../layout/Button/Button";
 import RobotStyle from "./RobotStyle";
 
@@ -12,7 +13,7 @@ const Robot = ({ robot }) => {
   };
 
   const deleteRobot = () => {
-    dispatch(deleteRobotActionCreator(robot._id));
+    dispatch(deleteRobotsThunk(robot._id));
   };
 
   return (
