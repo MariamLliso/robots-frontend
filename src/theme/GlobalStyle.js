@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import backgroundImage from "../images/background.png";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -10,6 +11,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Oxanium', 'Courier New', Courier, monospace;
     font-weight: 500;
     color: #fff;
+    background: linear-gradient(
+      180deg,
+      rgba(35, 37, 38, 0.95) 0%,
+      rgba(65, 67, 69, 0.95) 100%
+    ),
+    url(${backgroundImage}) no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   ul {

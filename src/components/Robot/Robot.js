@@ -1,10 +1,18 @@
+import { useDispatch } from "react-redux";
+import { deleteRobotActionCreator } from "../../redux/features/robotsSlice";
 import Button from "../layout/Button/Button";
 import RobotStyle from "./RobotStyle";
 
 const Robot = ({ robot }) => {
+  const dispatch = useDispatch();
+
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join("-");
+  };
+
+  const deleteRobot = () => {
+    dispatch(deleteRobotActionCreator(robot._id));
   };
 
   return (
@@ -30,7 +38,7 @@ const Robot = ({ robot }) => {
         </li>
       </ul>
 
-      <Button text={"Delete"} />
+      <Button text={"Delete"} action={deleteRobot} />
     </RobotStyle>
   );
 };
