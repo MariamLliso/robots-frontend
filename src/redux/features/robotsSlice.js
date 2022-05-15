@@ -5,7 +5,7 @@ const robotsSlice = createSlice({
   initialState: [],
   reducers: {
     loadRobots: (robots, action) => [...action.payload.robots],
-    deleteRobot: ({ robots }, action) =>
+    deleteRobot: (robots, action) =>
       robots.filter((robot) => robot._id !== action.payload),
   },
 });
