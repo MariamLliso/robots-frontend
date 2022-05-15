@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Oxanium', 'Courier New', Courier, monospace;
     font-weight: 500;
+    color: #fff;
   }
 
   ul {
@@ -19,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
   }
 `;
 
